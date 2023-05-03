@@ -8,7 +8,7 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xFF006D77),
+          color: Color.fromRGBO(	17, 126, 136,1,),
         ),
         child: Column(
           children: [

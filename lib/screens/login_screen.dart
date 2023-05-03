@@ -6,7 +6,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xff006D77), // background color of the page
+          color: Color.fromRGBO(	17, 126, 136,1,),// background color of the page
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

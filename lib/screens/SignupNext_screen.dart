@@ -13,7 +13,7 @@ class _SignupScreenState extends State<SignupNextScreen> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xff006D77),
+          color: Color.fromRGBO(	17, 126, 136,1,),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -59,7 +59,7 @@ class _SignupScreenState extends State<SignupNextScreen> {
                     SizedBox(height: 20),
                     TextFormField(
                       decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.email),
+                        prefixIcon: Icon(Icons.text_fields),
                         hintText: 'name',
                       ),
                     ),

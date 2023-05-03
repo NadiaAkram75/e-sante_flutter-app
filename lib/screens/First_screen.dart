@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class FirstScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class FirstScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-           SizedBox(height: 62),
+          SizedBox(height: 62),
           Container(
             height: 200,
             decoration: BoxDecoration(
@@ -34,13 +35,14 @@ class FirstScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 20,),
+                      SizedBox(
+                        height: 20,
+                      ),
                       Text(
-                         'Bonjour utilisateur!',
+                        'Bonjour utilisateur!',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 32,
-                          
                         ),
                       ),
                       SizedBox(height: 10),
@@ -92,22 +94,29 @@ class FirstScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 30,),
           Expanded(
-            child: Container(),),
-            Align(
-              alignment: Alignment.centerLeft,
-
-              child: Text('Urgences:',
+            child: Container(
+              child: Stack(children: [
+                Positioned(child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 20,),
+                    Text(
+                      'Urgences:',
+                    style: TextStyle(
+                      color: Color.fromRGBO(24, 12, 64, 1)
+                    ),
+                    )
+                
+                  ]
+                      ),
+                    ),
+                    
+                  ],
+            ),
             
-                      style: TextStyle(
-                        color: Color.fromRGBO(28, 46, 74,1,),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                      ),
-            )
-         
+          ),
+          ),
         ],
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pfe/screens/First_screen.dart';
-
+import 'package:pfe/screens/screen.dart';
 class SignupNexttScreen extends StatefulWidget {
   @override
   _SignupScreenState createState() => _SignupScreenState();
@@ -14,7 +14,7 @@ class _SignupScreenState extends State<SignupNexttScreen> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xff006D77),
+          color: Color.fromRGBO(	17, 126, 136,1,),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +49,7 @@ class _SignupScreenState extends State<SignupNexttScreen> {
                     ),
                     SizedBox(height: 30),
                     Text(
-                      'SIGN UP ',
+                      'SIGN UP to work on',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color.fromRGBO(0, 109, 119, 1),
@@ -68,27 +68,27 @@ class _SignupScreenState extends State<SignupNexttScreen> {
                     TextFormField(
                       
                       decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.credit_card),
-                        hintText: 'cin',
+                        prefixIcon: Icon(Icons.calendar_month_sharp),
+                        hintText: 'date de naissance',
                       ),
                     ),
                     SizedBox(height: 20),
                     TextFormField(
                      
                       decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.phone),
-                        hintText: 'Telephone',
+                        prefixIcon: Icon(Icons.image),
+                        hintText: 'profile image',
                       ),
                     ),
                     SizedBox(height: 30),
                     ElevatedButton(
                       onPressed: () {
                          Navigator.push(context, MaterialPageRoute(
-                          builder: (context)=>FirstScreen(),
+                          builder: (context)=>MyHomePage(),
                         
                          ));
                       },
-                      child: Text('NEXT'),
+                      child: Text('VALIDER'),
                       
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromRGBO(	28, 46, 74,1,),

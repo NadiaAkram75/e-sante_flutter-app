@@ -8,7 +8,7 @@ class SignupScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xff006D77),
+          color: Color.fromRGBO(	17, 126, 136,1,),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
