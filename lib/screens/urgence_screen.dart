@@ -1,110 +1,336 @@
 import 'package:flutter/material.dart';
-
+import 'package:pfe/screens/appoi.dart';
+import 'package:pfe/screens/doc-prof_screen.dart';
 class UrgenceScreen extends StatelessWidget {
+  const UrgenceScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Types d\'urgences :'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {},
-          ),
-        ],
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: GridView.count(
-          crossAxisCount: 3,
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            EmergencyMenuBox(
-              label: 'Heart Attack',
-              image: 'assets/images/heart.png',
+            SizedBox(
+              height: 30,
             ),
-            EmergencyMenuBox(
-              label: 'Burn',
-              image: 'assets/images/burn.png',
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Center(
+                    child: Text(
+                      'Type d\'Urgences:',
+                      style: TextStyle(
+                          color: Color.fromRGBO(128, 0, 32, 1),
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.menu),
+                    onPressed: () {
+                      // Open menu
+                    },
+                  ),
+                ],
+              ),
             ),
-            EmergencyMenuBox(
-              label: 'Injury',
-              image: 'assets/images/injury.png',
+            Expanded(
+              child: Container(
+                color: Colors.white,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/heartt.png',
+                                  height: 100,
+                                  width: 100,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Cardiaque",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/neuroo.png',
+                                  height: 100,
+                                  width: 100,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Neurologique",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/allergie.png',
+                                  height: 100,
+                                  width: 100,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Allergique",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 5),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/gastro.png',
+                                  height: 100,
+                                  width: 100,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Gastro/uro",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/trauma.png',
+                                  height: 100,
+                                  width: 100,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Traumatique",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 5),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/gyneco.png',
+                                  height: 100,
+                                  width: 100,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Gynécologique",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/corps_et.png',
+                                  height: 100,
+                                  width: 100,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Corps étranger",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 5),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/mors.png',
+                                  height: 100,
+                                  width: 100,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Morsure/piqure",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/resp.png',
+                                  height: 100,
+                                  width: 100,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Respiratoire",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/psy.png',
+                                  height: 100,
+                                  width: 100,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Psychiatrique",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ),
-            EmergencyMenuBox(
-              label: 'Allergy',
-              image: 'assets/images/allergy.png',
-            ),
-            EmergencyMenuBox(
-              label: 'Choking',
-              image: 'assets/images/choking.png',
-            ),
-            EmergencyMenuBox(
-              label: 'Seizure',
-              image: 'assets/images/seizure.png',
-            ),
-            EmergencyMenuBox(
-              label: 'Stroke',
-              image: 'assets/images/stroke.png',
-            ),
-            EmergencyMenuBox(
-              label: 'Asthma',
-              image: 'assets/images/asthma.png',
-            ),
-            EmergencyMenuBox(
-              label: 'Poisoning',
-              image: 'assets/images/poisoning.png',
-            ),
-            EmergencyMenuBox(
-              label: 'Fracture',
-              image: 'assets/images/fracture.png',
+            Center(
+              child: Container(
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AppoiScreen(),
+                        ));
+                  },
+                  child: Text(
+                    "Consulter docteur",
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromRGBO(128, 0, 32, 1),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xFFFF8E8E),
-        onPressed: () {},
-        child: Text('Consult Doctor'),
-      ),
-    );
-  }
-}
-
-class EmergencyMenuBox extends StatelessWidget {
-  final String label;
-  final String image;
-
-  const EmergencyMenuBox({
-    required this.label,
-    required this.image,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Color(0xFFFF8E8E),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            image,
-            height: 50,
-            width: 50,
-          ),
-          SizedBox(height: 5),
-          Text(
-            label,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 12,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ],
       ),
     );
   }

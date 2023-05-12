@@ -108,100 +108,112 @@ class MyHomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SignupNexttScreen(),
-                          ),
-                        ); // do something when image is tapped
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 142, 142 ,1),
-                          borderRadius: BorderRadius.circular(10),
+                    Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/heartt.png',
+                                  height: 80,
+                                  width: 80,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Cardiaque",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
                         ),
-                        child: Image.asset(
-                          'assets/images/cardio.png',
-                          width: 70,
-                          height: 70,
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/neuroo.png',
+                                  height: 80,
+                                  width: 80,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Neurologique",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
                         ),
-                      ),
-                    ),
+                        Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/allergie.png',
+                                  height: 80,
+                                  width: 80,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Allergique",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
                     SizedBox(width: 16,),
-                     GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SignupNexttScreen(),
-                          ),
-                        ); // do something when image is tapped
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 142, 142 ,1),
-                          borderRadius: BorderRadius.circular(10),
+                    Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+
+                                 Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => UrgenceScreen(),
+                        ));
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFff8e8e),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                child: Image.asset(
+                                  'assets/images/plus.png',
+                                  height: 80,
+                                  width: 80,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              "Plus",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ],
                         ),
-                        child: Image.asset(
-                          'assets/images/neuro.png',
-                          width: 70,
-                          height: 70,
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 16,),
-                     GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SignupNexttScreen(),
-                          ),
-                        ); // do something when image is tapped
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 142, 142 ,1),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Image.asset(
-                          'assets/images/allergie.png',
-                          width: 70,
-                          height: 70,
-                        ),
-                        
-                      ),
-                      
-                    ),
-                    SizedBox(width: 16,),
-                     GestureDetector(
-                      onTap: () {
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context)=> UrgenceScreen(),
-                        
-                         ));// do something when image is tapped
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 142, 142 ,1),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Image.asset(
-                          'assets/images/plus.png',
-                          width: 70,
-                          height: 70,
-                          
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ],
             ),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 5),
           Container(
              height: 120,
             decoration: BoxDecoration(
@@ -266,60 +278,59 @@ class MyHomePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 10),
-          Container(
-            padding: EdgeInsets.all(16),
-            color: Colors.white,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  
-            children: [
-                   
-              Image.asset("assets/images/doc-app.png",
+          
+         Expanded(
+            child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  margin: EdgeInsets.symmetric(vertical: 2, horizontal: 24),
+                  child: Row(
+                    children: [
+                      Image.asset("assets/images/doc-app.png",
                width: 170,
                   height: 170,
                   ),
-                     
-                    
-                    SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Dr. John Smith",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(height: 8),
-                        Text(
-                          "Cardiologist",
-                          style: TextStyle(fontSize: 16, color: Colors.grey),
-                        ),
-                        SizedBox(height: 8),
-                        Row(
-                          children: [
-                            Icon(Icons.star, color: Colors.yellow),
-                            Icon(Icons.star, color: Colors.yellow),
-                            Icon(Icons.star, color: Colors.yellow),
-                            Icon(Icons.star, color: Colors.grey),
-                            Icon(Icons.star, color: Colors.grey),
-                            SizedBox(width: 8),
-                            Text(
-                              "(32)",
-                              style: TextStyle(color: Colors.grey),
+                      SizedBox(width: 16),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Doctor Name $index',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 5,),
-                    
-                  ],
-                ),
-               
-              ],
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Specialty $index',
+                            style: TextStyle(
+                              color: Colors.grey[600],
+                            ),
+                          ),
+                          SizedBox(height: 2),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.star,
+                                color: Colors.orange,
+                              ),
+                              SizedBox(width: 4),
+                              Text(
+                                '4.5',
+                                style: TextStyle(
+                                  color: Colors.grey[600],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                );
+              },
             ),
           ),
         ],

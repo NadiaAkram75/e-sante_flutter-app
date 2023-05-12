@@ -80,7 +80,8 @@ class SignupScreen extends StatelessWidget {
                          Navigator.push(context, MaterialPageRoute(
                           builder: (context)=>SignupNextScreen(),
                         
-                         ));
+                         )
+                         );
                       },
                       child: Text('NEXT'),
                       
